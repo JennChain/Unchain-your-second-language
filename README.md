@@ -1,8 +1,6 @@
 # Unchain-your-second-language
 My website
 /mi-web
-  └── index.html
-  └── style.css
   
 <!DOCTYPE html>
 <html lang="es">
