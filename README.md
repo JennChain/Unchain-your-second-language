@@ -1,93 +1,69 @@
 # Unchain-your-second-language
 My website
 /mi-web
-  
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clases Online</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Tu Plataforma de Clases Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000000;
+      color: #E0E0E0;
+    }
+    .neon {
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Clases Online</h1>
-    <nav>
-      <a href="#basico">Básico</a>
-      <a href="#intermedio">Intermedio</a>
-      <a href="#avanzado">Avanzado</a>
-    </nav>
-  </header>
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+    <h1 class="text-4xl text-cyan-300 neon animate-pulse">Bienvenida...</h1>
+  </div>
 
-  <section id="basico">
-    <h2>Clases Básicas</h2>
-    <p>Aquí encontrarás material introductorio para comenzar desde cero.</p>
+  <!-- NavBar -->
+  <nav class="flex justify-between items-center p-4 bg-black bg-opacity-80 backdrop-blur-md fixed w-full z-40">
+    <h1 class="text-2xl text-cyan-400 neon">TuAcademia</h1>
+    <select class="bg-transparent text-white border border-cyan-400 rounded px-2 py-1">
+      <option>Español</option>
+      <option>English</option>
+    </select>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-24 text-center px-6">
+    <h2 class="text-5xl text-cyan-300 neon mb-6">Aprende a tu ritmo</h2>
+    <p class="text-lg text-gray-400 mb-8">Explora nuestras clases según tu nivel</p>
   </section>
 
-  <section id="intermedio">
-    <h2>Clases Intermedias</h2>
-    <p>Contenidos más avanzados para seguir creciendo.</p>
+  <!-- Secciones -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 pb-20">
+    <div class="bg-black border border-cyan-400 rounded-2xl p-6 hover:scale-105 transition">
+      <h3 class="text-xl text-cyan-300 mb-2">Básico</h3>
+      <p class="text-gray-400">Clases introductorias para comenzar desde cero.</p>
+    </div>
+    <div class="bg-black border border-cyan-400 rounded-2xl p-6 hover:scale-105 transition">
+      <h3 class="text-xl text-cyan-300 mb-2">Intermedio</h3>
+      <p class="text-gray-400">Desarrolla habilidades con contenidos prácticos.</p>
+    </div>
+    <div class="bg-black border border-cyan-400 rounded-2xl p-6 hover:scale-105 transition">
+      <h3 class="text-xl text-cyan-300 mb-2">Avanzado</h3>
+      <p class="text-gray-400">Domina y especialízate con clases avanzadas.</p>
+    </div>
   </section>
 
-  <section id="avanzado">
-    <h2>Clases Avanzadas</h2>
-    <p>Retos y proyectos para dominar completamente el tema.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Clases Online. Todos los derechos reservados.</p>
-  </footer>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #000;
-  color: #00aaff;
-}
-
-header {
-  background-color: #0a0a0a;
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 2px solid #00aaff;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-nav {
-  margin-top: 1rem;
-}
-
-nav a {
-  color: #00aaff;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  padding: 2rem;
-  border-bottom: 1px solid #222;
-}
-
-h2 {
-  color: #00aaff;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #0a0a0a;
-  font-size: 0.9rem;
-}
-
